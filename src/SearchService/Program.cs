@@ -1,4 +1,4 @@
-using Contracts;
+using System.Net;
 using MassTransit;
 using Polly;
 using Polly.Extensions.Http;
@@ -54,5 +54,5 @@ app.Lifetime.ApplicationStarted.Register(async () =>
 
 app.Run();
 
-static IAsyncPolicy<HttpResponseMessage> GetPolicy() 
-    => HttpPolicyExtensions.HandleTransientHttpError().OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound).WaitAndRetryForeverAsync(_ => TimeSpan.FromSeconds(3));
+static IAsyncPolicy<HttpResponseMessage> GetPolicy()=> HttpPolicyExtensions.HandleTransientHttpError().OrResult(msg => msg.StatusCode == HttpStatusCode.NotFound)
+    .WaitAndRetryForeverAsync(_ => TimeSpan.FromSeconds(3));

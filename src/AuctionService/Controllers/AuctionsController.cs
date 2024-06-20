@@ -26,7 +26,6 @@ namespace AuctionService.Controllers
             _context = context;
         }
 
-
         [HttpGet]
         public async Task<ActionResult<List<AuctionDto>>> GetAllAuctions(string date)
         {
