@@ -1,5 +1,6 @@
 using BiddingService.Consumers;
 using BiddingService.Services;
+using Contracts;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MongoDB.Driver;

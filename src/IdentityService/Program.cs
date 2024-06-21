@@ -1,4 +1,5 @@
 ﻿using IdentityService;
+using Npgsql;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
