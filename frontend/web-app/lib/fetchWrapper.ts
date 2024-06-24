@@ -1,4 +1,5 @@
-import { getTokenWorkaround } from "@/app/actions/auctionActions";
+import { getTokenWorkaround } from "@/app/actions/authActions";
+
 
 const baseUrl = 'http://localhost:6001/'
 

@@ -3,9 +3,8 @@
 
 import React from 'react'
 import Heading from '../components/Heading';
-import { getSession } from '../actions/authActions';
+import { getSession, getTokenWorkaround } from '../actions/authActions';
 import AuthTest from './AuthTest';
-import { getTokenWorkaround } from '../actions/auctionActions';
 
 export default async function Session() {
     const session = await getSession();

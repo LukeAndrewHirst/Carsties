@@ -29,6 +29,7 @@ export const authoOptions: NextAuthOptions = {
             if(token){
                 session.user.username = token.username
             }
+
             return session;
         }
     }
